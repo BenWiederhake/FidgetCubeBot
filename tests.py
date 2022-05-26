@@ -37,6 +37,11 @@ class TestSequences(unittest.TestCase):
             (('roll', '', 123, 'usna', 'fina'), False, ('roll', 'fina')),
         ])
 
+    def test_plopp(self):
+        self.check_sequence([
+            (('plopp', '', 123, 'usna', 'fina'), False, ('plopp', 'fina')),
+        ])
+
 
 if __name__ == '__main__':
     unittest.main()
