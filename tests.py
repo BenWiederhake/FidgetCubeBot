@@ -39,7 +39,19 @@ class TestSequences(unittest.TestCase):
 
     def test_plopp(self):
         self.check_sequence([
-            (('plopp', '', 123, 'usna', 'fina'), False, ('plopp', 'fina')),
+            (('plopp', '', 123, 'usna', 'fina'), True, ('plopp', 'fina', 1)),
+        ])
+
+    def test_plopp_many(self):
+        self.check_sequence([
+            (('plopp', '', 123, 'usna', 'fina'), True, ('plopp', 'fina', 1)),
+            (('plopp', '', 123, 'usna', 'fina'), True, ('plopp', 'fina', 2)),
+            (('plopp', '', 123, 'usna', 'fina'), True, ('plopp', 'fina', 3)),
+            (('plopp', '', 123, 'usna', 'fina'), True, ('plopp', 'fina', 4)),
+            (('plopp', '', 123, 'usna', 'fina'), True, ('plopp', 'fina', 5)),
+            (('plopp', '', 123, 'usna', 'fina'), True, ('plopp', 'fina', 6)),
+            (('plopp', '', 123, 'usna', 'fina'), True, ('plopp', 'fina', 7)),
+            (('plopp', '', 456, 'usnb', 'finb'), True, ('plopp', 'finb', 8)),
         ])
 
     def test_count_latejoin(self):

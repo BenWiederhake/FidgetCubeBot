@@ -3,7 +3,7 @@
 
 
 def default_state():
-    return dict(per_user=dict(), per_group=dict(), highest_count=dict(number=0, by_first='???', by_id=0))
+    return dict(per_user=dict(), highest_count=dict(number=0, by_first='???', by_id=0), plopps=0)
 
 
 def default_user_dict():
@@ -11,7 +11,8 @@ def default_user_dict():
 
 
 def compute_plopp(state, argument, sender_id, sender_username, sender_firstname):
-    return False, ('plopp', sender_firstname)
+    state['plopps'] += 1
+    return True, ('plopp', sender_firstname, state['plopps'])
 
 
 def compute_roll(state, argument, sender_id, sender_username, sender_firstname):
