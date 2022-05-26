@@ -32,6 +32,11 @@ class TestSequences(unittest.TestCase):
             (('start', '', 123, 'usna', 'fina'), False, ('unknown_command', 'fina')),
         ])
 
+    def test_roll(self):
+        self.check_sequence([
+            (('roll', '', 123, 'usna', 'fina'), False, ('roll', 'fina')),
+        ])
+
 
 if __name__ == '__main__':
     unittest.main()
