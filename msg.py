@@ -36,7 +36,8 @@ MESSAGES = {
     ],
     'count_high_better': [  # {0} is sender_firstname, {1} is user_dict['counts']
         'HIGH SCORE! Jetzt bist du schon bei {1}.',
-        '{1}?! Oh fuck yeah, {0} ;)',
+        'HIGH SCORE! Eine {1} von {0}!',
+        '{1}?! Oh fuck yeah, {0}! ;)',
         '{1}! Ein neuer Rekord von dir!',
         '{1}! Ohoho, du übertriffst dich mal wieder selbst, {0} ;)',
         'Mit {1} bist du sogar besser als wie du selbst, {0}!',
@@ -79,7 +80,7 @@ MESSAGES = {
         'Na meinetwegen, {0}. Jetzt kommt die {1}.',
         'Können wir nicht lieber über die {3} von {2} reden?',
         'Die Zahl ist so klein, {0}, die sprech ich nicht mal aus.',
-        '{1}. Weißt du, es kommt halt *doch* auf die Grüße an, {0}.',
+        '{1}. Weißt du, es kommt halt *doch* auf die Größe an, {0}.',
         'Auch {0} kann jetzt bis {1} zählen.',
         'Jetzt bist du schon bei {1}.',
     ],
