@@ -26,7 +26,9 @@ def load_state():
     global FIDGETCUBE_STATE
     if os.path.exists(PERMANENCE_FILENAME):
         with open(PERMANENCE_FILENAME, 'r') as fp:
-            FIDGETCUBE_STATE = json.load(fp)
+            fidgetcube_state = json.load(fp)
+        logic.unfuck_state(fidgetcube_state)
+        FIDGETCUBE_STATE = fidgetcube_state
         logger.info(f'Loaded: {FIDGETCUBE_STATE}')
     else:
         logger.info(f'Permanence file {PERMANENCE_FILENAME} does not exist; starting from scratch.')

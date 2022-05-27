@@ -2,6 +2,14 @@
 # Not for execution
 
 
+def unfuck_state(state):
+    old_per_user = state['per_user']
+    # JSON doesn't allow numbers as keys, so we have to convert them manually back:
+    new_per_user = {int(k): v for k, v in old_per_user.items()}
+    state['per_user'] = new_per_user
+    return state
+
+
 def default_state():
     return dict(per_user=dict(), highest_count=dict(number=0, by_first='???', by_id=0), plopps=0)
 
