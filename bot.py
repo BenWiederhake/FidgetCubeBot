@@ -58,6 +58,7 @@ def cmd_start(update: Update, _context: CallbackContext) -> None:
         f'\n/count@{secret.BOTNAME} → Zählt eins hoch. Probier es doch mal aus!'
         f'\n/plopp@{secret.BOTNAME} → Mach plopp!'
         f'\n/roll@{secret.BOTNAME} → Würfelt eine ganz doll zufällige Zahl!'
+        f'\n/bin_ich_toll@{secret.BOTNAME} → Bist du toll?'
         f'\nViel mehr macht der Bot nicht.'
         f'\nhttps://github.com/BenWiederhake/FidgetCubeBot'
         # For BotFather:
@@ -105,6 +106,7 @@ def run():
     dispatcher.add_handler(CommandHandler("count", cmd_for('count')))
     dispatcher.add_handler(CommandHandler("plopp", cmd_for('plopp')))
     dispatcher.add_handler(CommandHandler("roll", cmd_for('roll')))
+    dispatcher.add_handler(CommandHandler("bin_ich_toll", cmd_for('bin_ich_toll')))
 
     # Start the Bot
     # We pass 'allowed_updates' handle *all* updates including `chat_member` updates
