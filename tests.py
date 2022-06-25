@@ -128,6 +128,13 @@ class TestSequences(unittest.TestCase):
             (('count', '', 123, '', 'fina'), True, ('count_high_better', 'fina', 17)),
         ])
 
+    def test_toll(self):
+        self.check_sequence([
+            (('bin_ich_toll', '', 123, 'usna', 'fina'), False, ('sehr_toll', 'fina', 'usna')),
+            (('bin_ich_toll', '', 123, 'usna', 'fina'), False, ('sehr_toll', 'fina', 'usna')),
+            (('bin_ich_toll', '', 456, 'usnb', 'finb'), False, ('sehr_toll', 'finb', 'usnb')),
+        ])
+
 
 if __name__ == '__main__':
     unittest.main()

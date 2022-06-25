@@ -65,6 +65,10 @@ def compute_count(state, argument, sender_id, sender_username, sender_firstname)
             return True, ('count_high', sender_firstname, user_dict['counts'], old_best_firstname, highscore['number'])
 
 
+def compute_bin_ich_toll(state, argument, sender_id, sender_username, sender_firstname):
+    return False, ('sehr_toll', sender_firstname, sender_username)
+
+
 def handle(state, command, argument, sender_id, sender_username, sender_firstname):
     if command == 'roll':
         return compute_roll(state, argument, sender_id, sender_username, sender_firstname)
@@ -72,5 +76,7 @@ def handle(state, command, argument, sender_id, sender_username, sender_firstnam
         return compute_plopp(state, argument, sender_id, sender_username, sender_firstname)
     elif command == 'count':
         return compute_count(state, argument, sender_id, sender_username, sender_firstname)
+    elif command == 'bin_ich_toll':
+        return compute_bin_ich_toll(state, argument, sender_id, sender_username, sender_firstname)
     else:
         return False, ('unknown_command', sender_firstname)
